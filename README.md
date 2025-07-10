@@ -24,6 +24,7 @@ I paid close attention to layout structure, reusable components, and TypeScript 
 
 - Next.js
 - Tailwind CSS
+- -Typescript
 
  [![My Skills](https://skillicons.dev/icons?i=nextjs,tailwindcss,typescript)](https://skillicons.dev)
 
