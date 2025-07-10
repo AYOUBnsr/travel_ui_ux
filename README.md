@@ -196,30 +196,37 @@ body {
 }
 
 @layer utilities {
+  /* Buttons – slightly larger padding */
   .btn_white { 
-    @apply  border-white bg-white px-8 py-3 text-green-50
+    @apply border-white bg-white px-5 py-2.5 text-green-50;
   }
+
   .btn_white_text  { 
-    @apply  border-white bg-white px-8 py-3 text-gray-90
+    @apply border-white bg-white px-5 py-2.5 text-gray-90;
   }
+
   .btn_green  { 
-    @apply  border-green-50 bg-green-50 px-8 py-5 text-white
+    @apply border-green-50 bg-green-50 px-5 py-4 text-white;
   }
+
   .btn_dark_green { 
-    @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
+    @apply bg-green-90 px-5 py-3 text-white transition-all hover:bg-black;
   }
+
   .btn_dark_green_outline  { 
-    @apply border-gray-20 bg-green-90 px-8 py-5 text-white
+    @apply border-gray-20 bg-green-90 px-5 py-4 text-white;
   }
-  
+
+  /* Container – slightly wider */
   .max-container {
-    @apply mx-auto max-w-[1440px];
+    @apply mx-auto max-w-[1200px];
   }
 
   .padding-container {
-    @apply px-6 lg:px-20 3xl:px-0;
+    @apply px-5 md:px-14 lg:px-20 3xl:px-0;
   }
 
+  /* Flex */
   .flexCenter {
     @apply flex items-center justify-center;
   }
@@ -236,73 +243,73 @@ body {
     @apply flex items-center justify-end;
   }
 
-  /* FONTS */
+  /* Fonts – balanced zoom */
   .regular-64 {
-    @apply text-[64px] font-[400] leading-[120%];
+    @apply text-[48px] font-[400] leading-[120%];
   }
 
   .regular-40 {
-    @apply text-[40px] font-[400] leading-[120%];
+    @apply text-[30px] font-[400] leading-[120%];
   }
 
   .regular-32 {
-    @apply text-[32px] font-[400];
-  }
-
-  .regular-24 {
     @apply text-[24px] font-[400];
   }
 
-  .regular-20 {
+  .regular-24 {
     @apply text-[20px] font-[400];
   }
 
-  .regular-18 {
+  .regular-20 {
     @apply text-[18px] font-[400];
   }
 
+  .regular-18 {
+    @apply text-[17px] font-[400];
+  }
+
   .regular-16 {
-    @apply text-[16px] font-[400];
+    @apply text-[15px] font-[400];
   }
 
   .regular-14 {
-    @apply text-[14px] font-[400];
+    @apply text-[13px] font-[400];
   }
 
   .medium-14 {
-    @apply text-[14px] font-[600];
+    @apply text-[13px] font-[600];
   }
 
   .bold-88 {
-    @apply text-[88px] font-[700] leading-[120%];
+    @apply text-[66px] font-[700] leading-[120%];
   }
 
   .bold-64 {
-    @apply text-[64px] font-[700] leading-[120%];
+    @apply text-[50px] font-[700] leading-[120%];
   }
 
   .bold-52 {
-    @apply text-[52px] font-[700] leading-[120%];
+    @apply text-[38px] font-[700] leading-[120%];
   }
 
   .bold-40 {
-    @apply text-[40px] font-[700] leading-[120%];
+    @apply text-[30px] font-[700] leading-[120%];
   }
 
   .bold-32 {
-    @apply text-[32px] font-[700] leading-[120%];
+    @apply text-[26px] font-[700] leading-[120%];
   }
 
   .bold-20 {
-    @apply text-[20px] font-[700];
+    @apply text-[17px] font-[700];
   }
 
   .bold-18 {
-    @apply text-[18px] font-[700];
+    @apply text-[16px] font-[700];
   }
 
   .bold-16 {
-    @apply text-[16px] font-[700];
+    @apply text-[15px] font-[700];
   }
 
   /* Hero */
@@ -312,30 +319,40 @@ body {
 
   /* Camp */
   .camp-quote {
-    @apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px] 3xl:right-0;
+    @apply absolute -right-6 bottom-4 w-[110px] lg:bottom-10 xl:-right-8 xl:w-[150px] 3xl:right-0;
   }
 
   /* Feature */
   .feature-phone {
-    @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex  3xl:left-20;
+    @apply absolute top-[13%] z-10 hidden max-w-[1100px] rotate-[15deg] md:-left-16 lg:flex 3xl:left-20;
   }
 
-  /* Get App */
+  /* Get App – balanced spacing */
   .get-app {
-    @apply max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
+    @apply max-container relative flex w-full flex-col justify-between gap-20 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-5 py-10 text-white sm:flex-row sm:gap-12 sm:py-20 lg:px-16 xl:max-h-[560px] 2xl:rounded-5xl;
   }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* Hide scrollbar */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
-/* Hide scrollbar for IE, Edge and Firefox */
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+/* Hide scrollbar globally but keep scrolling */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
 ```
 
 </details>
